@@ -7,8 +7,12 @@
 # ASPxGridView - how to hide Text in the GridViewDataColorEditColumn in browse mode
 
 
-<p>This example is a workaround for the S34301 suggestion</p>
+This task is implemented with DataItemTemplate:
 
-<br/>
-
-
+```
+<dx:GridViewDataColorEditColumn FieldName="Color" VisibleIndex="3">
+                        <DataItemTemplate>
+                            <div style="width: 15px; height: 15px; border: #9f9f9f 1px solid; background-color: <%#Container.Text %>"></div>
+                        </DataItemTemplate>
+</dx:GridViewDataColorEditColumn>
+```
